@@ -6,6 +6,7 @@ import BlogList from '../components/bloglist';
 import Link from 'next/link';
 import TodoList from '../components/todolist';
 import About from '../components/about';
+import Goals from '../components/goals';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -30,6 +31,7 @@ export default function Home({ allPostsData, todoListData }) {
       <About />
       <BlogList allPostsData={allPostsData} />
       <TodoList todoListData={todoListData} />
+      <Goals />
     </Layout >
   );
 }

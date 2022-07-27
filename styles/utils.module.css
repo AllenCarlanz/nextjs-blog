@@ -53,6 +53,7 @@
 
 .todoDone {
     color: red;
+    text-decoration: line-through;
 }
 
 .justify {
