@@ -8,7 +8,7 @@ export default function BlogList({ allPostsData }) {
             <h2 className={utilStyles.headingLg}>Blog</h2>
             <ul className={utilStyles.list}>
                 {allPostsData.map(({ id, date, title }) => (
-                    <BlogListItems id={id} date={date} title={title} />
+                    <BlogListItems key={id} id={id} date={date} title={title} />
                 ))}
             </ul>
         </section>

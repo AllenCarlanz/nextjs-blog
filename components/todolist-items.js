@@ -1,10 +1,8 @@
 import utilStyles from '../styles/utils.module.css';
 
-export default function TodoListItems({ id, title, completed }) {
-    if (completed) {
-        return (<li key={id} className={utilStyles.todoDone}>{title}</li>);
-    }
-    else {
-        return (<li key={id} >{title}</li>);
-    }
+export default function TodoListItem({ listData, markComplete }) {
+    return (<li><input type="checkbox" checked={listData.completed} onChange={(a) => {
+        a.preventDefault();
+        markComplete(listData.id, a.target.checked);
+    }} />{listData.title}</li>);
 }
